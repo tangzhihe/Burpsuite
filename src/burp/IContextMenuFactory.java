@@ -34,6 +34,9 @@ public interface IContextMenuFactory
      * return
      * <code>null</code> from this method, to indicate that no menu items are
      * required.
+     * 
+     * 当用户在Burp中的任何地方调用一个上下文菜单时，Burp则会调用这个工厂方法。此方法
+     * 会根据菜单调用的细节，提供应该被显示在上下文菜单中的任何自定义上下文菜单项.
      */
     List<JMenuItem> createMenuItems(IContextMenuInvocation invocation);
 }

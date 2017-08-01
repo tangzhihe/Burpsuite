@@ -26,6 +26,8 @@ public interface ICookie
      * <code>IResponseInfo.getCookies()</code>, the domain will be
      * <code>null</code> if the response did not explicitly set a domain
      * attribute for the cookie.
+     * 
+     * 此方法用于获取 Cookie 的域
      */
     String getDomain();
 
@@ -34,6 +36,8 @@ public interface ICookie
      * scope.
      *
      * @return The path for which the cookie is in scope or null if none is set.
+     * 
+     * 此方法用于获取 Cookie 的路径
      */
     String getPath();
 
@@ -43,6 +47,8 @@ public interface ICookie
      * @return The expiration time for the cookie, or
      * <code>null</code> if none is set (i.e., for non-persistent session
      * cookies).
+     * 
+     * 此方法用于获取 Cookie 的过期时间
      */
     Date getExpiration();
 
@@ -50,12 +56,16 @@ public interface ICookie
      * This method is used to retrieve the name of the cookie.
      * 
      * @return The name of the cookie.
+     * 
+     * 此方法用于获取 Cookie 的名称
      */
     String getName();
 
     /**
      * This method is used to retrieve the value of the cookie.
      * @return The value of the cookie.
+     * 
+     * 此方法用于获取 Cookie 的值
      */
     String getValue();
 }

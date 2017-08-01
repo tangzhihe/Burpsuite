@@ -63,6 +63,8 @@ public interface IInterceptedProxyMessage
      * @return An identifier that is unique to a single request/response pair.
      * Extensions can use this to correlate details of requests and responses
      * and perform processing on the response message accordingly.
+     * 
+     * 获取请求/响应消息的唯一引用号
      */
     int getMessageReference();
 
@@ -71,6 +73,8 @@ public interface IInterceptedProxyMessage
      *
      * @return An <code>IHttpRequestResponse</code> object containing details of
      * the intercepted message.
+     * 
+     * 获取被拦截的消息的详细信息
      */
     IHttpRequestResponse getMessageInfo();
 
@@ -84,6 +88,8 @@ public interface IInterceptedProxyMessage
      *
      * @return The currently defined interception action. Possible values are
      * defined within this interface.
+     * 
+     * 获取当前定义的拦截操作类型，具体的类型可以在本接口中看到
      */
     int getInterceptAction();
 
@@ -92,6 +98,8 @@ public interface IInterceptedProxyMessage
      *
      * @param interceptAction The new interception action. Possible values are
      * defined within this interface.
+     * 
+     * 设置更新拦截操作
      */
     void setInterceptAction(int interceptAction);
 
@@ -102,6 +110,8 @@ public interface IInterceptedProxyMessage
      * @return The name of the Burp Proxy listener that is processing the
      * intercepted message. The format is the same as that shown in the Proxy
      * Listeners UI - for example, "127.0.0.1:8080".
+     * 
+     * 获取Burp Proxy处理拦截消息监听器的名称
      */
     String getListenerInterface();
 
@@ -111,6 +121,8 @@ public interface IInterceptedProxyMessage
      *
      * @return The client IP address from which the request for the intercepted
      * message was received.
+     * 
+     * 获取被拦截的请求消息的客户端IP地址
      */
     InetAddress getClientIpAddress();
 }

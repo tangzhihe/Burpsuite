@@ -30,6 +30,8 @@ public interface IExtensionHelpers
      * request to be analyzed.
      * @return An <code>IRequestInfo</code> object that can be queried to obtain
      * details about the request.
+     * 
+     * 此方法用于分析 HTTP 请求信息以便获取到多个键的值
      */
     IRequestInfo analyzeRequest(IHttpRequestResponse request);
 
@@ -43,6 +45,8 @@ public interface IExtensionHelpers
      * @param request The request to be analyzed.
      * @return An <code>IRequestInfo</code> object that can be queried to obtain
      * details about the request.
+     * 
+     * 此方法用于分析 HTTP 请求信息以便获取到多个键的值
      */
     IRequestInfo analyzeRequest(IHttpService httpService, byte[] request);
 
@@ -55,6 +59,8 @@ public interface IExtensionHelpers
      * @param request The request to be analyzed.
      * @return An <code>IRequestInfo</code> object that can be queried to obtain
      * details about the request.
+     * 
+     * 此方法用于分析 HTTP 请求信息以便获取到多个键的值
      */
     IRequestInfo analyzeRequest(byte[] request);
 
@@ -65,6 +71,8 @@ public interface IExtensionHelpers
      * @param response The response to be analyzed.
      * @return An <code>IResponseInfo</code> object that can be queried to
      * obtain details about the response.
+     * 
+     * 此方法用于分析 HTTP 响应信息以便获取到多个键的值
      */
     IResponseInfo analyzeResponse(byte[] response);
 

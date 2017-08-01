@@ -82,6 +82,8 @@ public interface IContextMenuInvocation
      *
      * @return The <code>InputEvent</code> that was the trigger for the context
      * menu invocation.
+     * 
+     * 此方法可被用于获取本地Java输入事件,并作为上下文菜单调用的触发器
      */
     InputEvent getInputEvent();
 
@@ -92,6 +94,8 @@ public interface IContextMenuInvocation
      * @return A flag indicating the Burp tool within which the context menu was
      * invoked. Burp tool flags are defined in the
      * <code>IBurpExtenderCallbacks</code> interface.
+     * 
+     * 此方法被用于获取调用上下文菜单的Burp工具
      */
     int getToolFlag();
 
@@ -101,6 +105,8 @@ public interface IContextMenuInvocation
      *
      * @return An index indicating the context within which the menu was
      * invoked. The indices used are defined within this interface.
+     * 
+     * 此方法被用于获取上下文中被调用的菜单
      */
     byte getInvocationContext();
 
@@ -113,6 +119,8 @@ public interface IContextMenuInvocation
      * selection in the current message, both offsets indicate the position of
      * the caret within the editor. If the menu is not being invoked from a
      * message editor, the method returns <code>null</code>.
+     * 
+     * 此方法被用于获取用户所选的当前消息的界限(消息需可适用)
      */
     int[] getSelectionBounds();
 
@@ -140,6 +148,8 @@ public interface IContextMenuInvocation
      * representing the items that were shown or selected by the user when the
      * context menu was invoked. This method returns <code>null</code> if no
      * messages are applicable to the invocation.
+     * 
+     * 此方法被用于获取当前显示的或用户选中的HTTP请求/响应的细节
      */
     IHttpRequestResponse[] getSelectedMessages();
 
@@ -151,6 +161,8 @@ public interface IContextMenuInvocation
      * issues that were selected by the user when the context menu was invoked.
      * This method returns <code>null</code> if no Scanner issues are applicable
      * to the invocation.
+     * 
+     * 此方法被用于获取用户选中的Scanner问题的细节
      */
     IScanIssue[] getSelectedIssues();
 }
